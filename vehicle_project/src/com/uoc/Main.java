@@ -1,26 +1,25 @@
 package com.uoc;
 
-
 import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        System.out.println("=============WELCOME=============\n PARKING MANAGEMENT SYSTEM OF UOC");
-        System.out.println("1.Enter the park");
-        System.out.println("2.exit the park \n ....enter your selection(1 or 2)....");
-        Scanner scanner = new Scanner(System.in);
-        int input = scanner.nextInt();
+            System.out.println("=============WELCOME=============\n PARKING MANAGEMENT SYSTEM OF UOC");
+            System.out.println("1.Enter the park");
+            System.out.println("2.exit the park \n3.exit ....enter your selection(1 or 2)....");
+            Scanner scanner = new Scanner(System.in);
+            int input = scanner.nextInt();
 
         park_slot available = new park_slot();
         park_slot park_slot1=new park_slot();
         park_slot park_slot2=new park_slot();
         park_slot park_slot3=new park_slot();
 
+        //consumers selections
         switch (input) {
             case (1):
                 System.out.println("Enter your park type:\n 1.standard park(Light vehicles and Bicycles)\n 2.Handicapped park\n 3.Long vehicle park");
                 System.out.println("....enter your selection(1,2 or 3)....");
-
 
                 available.indicator();
                 break;
@@ -41,6 +40,11 @@ public class Main {
 
                 System.out.println("====Thank You!====");
                 System.out.println("Have a good journey");
+                break;
+
+            case 3:
+                System.out.println("====Thank You!====");
+                break;
         }
 
     }
